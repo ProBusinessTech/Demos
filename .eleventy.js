@@ -14,8 +14,8 @@ console.log('pathPrefix is set to ...', pathPrefix);
 // see "eleventyConfig.addGlobalData("site", globalData);"" below
 // related: https://github.com/11ty/eleventy/issues/1641
 const globalSiteData = {
-  title: "11ty-plain-bootstrap5",
-  description: "Template for static site generator Eleventy with Boostrap 5 and SCSS/JS compilation via laravel-mix.",
+  title: "ProBusinessTech.com - Demos",
+  description: "Professional Business Technologies, Inc. - Demos",
   locale: 'en',
   baseUrl: baseUrl,
   pathPrefix: pathPrefix,
@@ -95,6 +95,11 @@ module.exports = function (eleventyConfig) {
   // eleventy-img config
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
+  // Extra Data - simplest, but didnt work
+  //eleventyConfig.addGlobalData('repo', async () => fetch('https://api.github.com/repos/11ty/eleventy'));
+
+  //eleventyConfig.addGlobalData('repos', async () => fetch('https://api.github.com/users/ProBusinessTech/repos'));
+  
   // Base Config
   return {
     dir: {
