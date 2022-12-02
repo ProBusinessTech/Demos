@@ -58,6 +58,8 @@ async function imageShortcode(src, alt, sizes = "100vw") {
     </picture>`;
 }
 
+const filters = require('./utils/filters.js')
+
 module.exports = function (eleventyConfig) {
 
   // Set site title
@@ -66,6 +68,11 @@ module.exports = function (eleventyConfig) {
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+    
+  // Filters
+  Object.keys(filters).forEach((filterName) => {
+    eleventyConfig.addFilter(filterName, filters[filterName])
+  })
 
   // Copy dist/ files from laravel mix
   eleventyConfig.addPassthroughCopy("dist/"); // path is relative from root
@@ -101,6 +108,8 @@ module.exports = function (eleventyConfig) {
 
   //eleventyConfig.addGlobalData('repos', async () => fetch('https://api.github.com/users/ProBusinessTech/repos'));
   
+
+
   // Base Config
   return {
     dir: {

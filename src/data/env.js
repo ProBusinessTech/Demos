@@ -39,5 +39,6 @@ module.exports = {
   },
   tracking: {
     gtag: 'UA-91383659-1'
-  }
+  },
+  version: 0.1
 };

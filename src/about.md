@@ -4,10 +4,9 @@ eleventyNavigation:
   key: About
   order: 1
   url: https://probusinesstech.com/about/
-permalink: false
 ---
 
-## About {{ site.title }}
+## About {{site.title}} v{{env.version}}
 
 **Created in December 2022<br/>By <a href="https://radicaldave.com" target="_blank">David Walker aka Radical Dave</a>**
 
