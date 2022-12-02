@@ -1,5 +1,5 @@
 [
-	{"text": "About", "url": "/about/"},
-	{"text": "Contact", "url": "/contact/"},
-	{"text": "Privacy", "url": "/privacy/"}
+	{"text": "About", "url": "~/about/"},
+	{"text": "Connect", "url": "/connect/"},
+	{"text": "Privacy", "url": "~/privacy/"}
 ]
